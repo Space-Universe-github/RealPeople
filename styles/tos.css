@@ -1,0 +1,119 @@
+.tos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--text-primary);
+}
+
+.tos-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+  border-left: 2px solid var(--neon-primary);
+  padding-left: 2rem;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--neon-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon-primary);
+}
+
+.section h2 {
+  color: var(--neon-primary);
+  margin-bottom: 1.5rem;
+}
+
+.section h3 {
+  color: var(--neon-secondary);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.subsection {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.policy-nav {
+  position: fixed;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.nav-item {
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--neon-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background: var(--neon-primary);
+  color: var(--bg-primary);
+  transform: translateX(-5px);
+}
+
+.nav-item.active {
+  background: var(--neon-primary);
+  color: var(--bg-primary);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--neon-primary);
+  color: var(--neon-primary);
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  background: var(--neon-primary);
+  color: var(--bg-primary);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1200px) {
+  .policy-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .tos-container {
+    padding: 1rem;
+  }
+  
+  .section {
+    padding-left: 1rem;
+  }
+}
