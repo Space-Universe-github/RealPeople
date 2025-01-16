@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Template & Features Guide - RealPeople</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/glitch.css">
+  <link rel="stylesheet" href="./post.css">
+</head>
+<body>
+  <main class="post-container">
+    <article>
+      <header class="post-header">
+        <div class="post-date">Updated on March 21, 2024</div>
+        <h1 class="post-title glitch-text">Post Template & Features Guide</h1>
+        <div class="post-meta">
+          <span>Template ID: #RP-TEMPLATE-001</span>
+          <span>Category: Documentation</span>
+          <div class="tags">
+            <span class="tag">Template</span>
+            <span class="tag">Guide</span>
+            <span class="tag">Features</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="verification-status">
+        <svg class="verification-icon" viewBox="0 0 24 24">
+          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </svg>
+        Official RealPeople Documentation
+      </div>
+
+      <div class="post-content">
+        <p>This template demonstrates all available features and formatting options for RealPeople posts. Use this as a reference when creating your exposés.</p>
+
+        <h2>1. Status Indicators</h2>
+        <div class="status-indicator status-verified">✓ Verified</div>
+        <div class="status-indicator status-pending">⋯ Pending Review</div>
+        <div class="status-indicator status-disputed">! Disputed</div>
+
+        <h2>2. Evidence Boxes</h2>
+        <div class="evidence-box">
+          <p>Evidence boxes are used to highlight important evidence:</p>
+          <ul>
+            <li>Document references</li>
+            <li>Testimonials</li>
+            <li>Physical evidence</li>
+          </ul>
+        </div>
+
+        <h2>3. Timeline Format</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <strong>March 15, 2024</strong>
+            <p>Initial evidence gathered</p>
+          </div>
+          <div class="timeline-item">
+            <strong>March 16, 2024</strong>
+            <p>Secondary verification completed</p>
+          </div>
+          <div class="timeline-item">
+            <strong>March 17, 2024</strong>
+            <p>Final documentation prepared</p>
+          </div>
+        </div>
+
+        <h2>4. Redacted Content</h2>
+        <p>Sensitive information can be <span class="redacted">redacted like this</span> to protect identities.</p>
+
+        <h2>5. Code Blocks</h2>
+        <div class="code-block">
+          function example() {
+            console.log("Evidence of malicious code");
+          }
+        </div>
+
+        <h2>6. Highlight Boxes</h2>
+        <div class="highlight-box">
+          <p>Use highlight boxes to emphasize critical information or warnings that readers should pay special attention to.</p>
+        </div>
+
+        <h2>7. Spoiler Content</h2>
+        <div class="spoiler hidden">
+          This content is hidden until clicked. Use for sensitive details.
+        </div>
+
+        <h2>8. Citations</h2>
+        <p>When referencing external sources, use citation blocks.</p>
+        <div class="citation">
+          Source: Internal Memo #45892, dated March 15, 2024
+        </div>
+
+        <h2>9. Image Gallery</h2>
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200" alt="Evidence Photo 1">
+            <div class="gallery-caption">Caption for Evidence 1</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://via.placeholder.com/300x200" alt="Evidence Photo 2">
+            <div class="gallery-caption">Caption for Evidence 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="related-posts">
+        <h3>Related Posts</h3>
+        <div class="related-post-item">
+          <span class="related-post-date">March 20, 2024</span>
+          <span>Another Related Exposé</span>
+        </div>
+        <div class="related-post-item">
+          <span class="related-post-date">March 19, 2024</span>
+          <span>Connected Investigation</span>
+        </div>
+      </div>
+
+      <footer class="post-footer">
+        <div class="share-section">
+          <button class="share-button" onclick="copyPostLink()">Share Template</button>
+          <button class="share-button" onclick="window.location.href='https://realpeople.com/submit'">Create Post</button>
+        </div>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    // Handle spoiler reveals
+    document.querySelectorAll('.spoiler').forEach(spoiler => {
+      spoiler.addEventListener('click', () => {
+        spoiler.classList.toggle('hidden');
+      });
+    });
+
+    // Copy post link functionality
+    function copyPostLink() {
+      const postUrl = window.location.href;
+      navigator.clipboard.writeText(postUrl).then(() => {
+        alert('Template link copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy link:', err);
+      });
+    }
+
+    // Add glitch effect to redacted text on hover
+    document.querySelectorAll('.redacted').forEach(element => {
+      element.addEventListener('mouseover', () => {
+        element.style.animation = 'glitch 0.3s infinite';
+      });
+
+      element.addEventListener('mouseout', () => {
+        element.style.animation = '';
+      });
+    });
+  </script>
+</body>
+</html>

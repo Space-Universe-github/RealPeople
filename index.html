@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealPeople - Digital Truth Frontiers</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/glitch.css">
+  <link rel="stylesheet" href="./styles/intro.css">
+</head>
+<body>
+  <div id="intro-sequence">
+    <div class="logo-container">
+      <div class="intro-logo glitch-text">RealPeople</div>
+      <div class="intro-text">Welcome to RealPeople</div>
+      <div class="voiceover-text">
+        <span>Exposed truths.</span>
+        <span>Hidden realities.</span>
+        <span>The world is not what it seems.</span>
+      </div>
+    </div>
+    <div class="digital-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </div>
+
+  <audio id="whisper-audio" preload="auto">
+    <source src="https://example.com/audio/whisper.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="loading-screen">
+    <div class="logo glitch-text">RealPeople</div>
+  </div>
+
+  <main>
+    <header class="parallax-section">
+      <div class="parallax-bg">
+        <div class="bg-layer grid-layer"></div>
+        <div class="bg-layer noise-layer"></div>
+      </div>
+      <h1 class="glitch-text">RealPeople</h1>
+      <p class="neon-text fade-in">Welcome to the digital frontier where hidden truths come to light. Your voice matters. Your story deserves to be heard.</p>
+      <div class="scroll-indicator" data-target="submit">
+        <span class="scroll-text">Scroll Down</span>
+        <svg class="scroll-arrow" viewBox="0 0 24 24">
+          <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+        </svg>
+      </div>
+    </header>
+
+    <section id="submit" class="content-section">
+      <h2 class="glitch-text">Submit Your Exposé</h2>
+      <p class="neon-text">Ready to share your truth? Submit your story through our secure submission system. Your identity remains protected, your voice remains powerful.</p>
+      <div class="submit-container">
+        <button 
+          onclick="window.location.href='https://forms.google.com/submit-expose'" 
+          class="submit-button pulse" 
+          data-tooltip="Your submission is completely anonymous">
+          Submit Now
+        </button>
+        <button 
+          onclick="window.location.href='/posts/post.html'" 
+          class="submit-button" 
+          style="margin-left: 1rem;"
+          data-tooltip="View post template and features">
+          View Post Template
+        </button>
+      </div>
+    </section>
+
+    <section id="explanation" class="content-section">
+      <h2 class="glitch-text">Where Are the Posts?</h2>
+      <div class="explanation-content">
+        <p class="fade-in">You may be wondering why RealPeople doesn't showcase live posts directly on the site. To protect the integrity of the content and the identities involved, posts are only accessible via direct links. This approach ensures that sensitive information is not broadcast openly, preventing misuse and maintaining confidentiality.</p>
+        
+        <div class="info-cards">
+          <div class="card fade-in">
+            <h3>Protects Anonymity</h3>
+            <p>By restricting access to the posts, we minimize the risk of users being exposed against their will or targeted by malicious actors.</p>
+          </div>
+          
+          <div class="card fade-in">
+            <h3>Prevents Public Shaming</h3>
+            <p>Exposés shared publicly could lead to unintended consequences for the subjects involved. This system allows posts to be carefully shared only with those who need to see them.</p>
+          </div>
+          
+          <div class="card fade-in">
+            <h3>Deliberate Sharing</h3>
+            <p>Content is accessible only through shared links, ensuring that each exposé is presented thoughtfully and in the right context.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="legal-links">
+        <a href="https://realpeople.com/terms" class="neon-link">Terms of Service</a>
+        <a href="https://realpeople.com/privacy" class="neon-link">Privacy Policy</a>
+        <a href="https://realpeople.com/support" class="neon-link">Contact Support</a>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://twitter.com/realpeople" class="social-icon" aria-label="Twitter">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+          </svg>
+        </a>
+        <a href="https://github.com/realpeople" class="social-icon" aria-label="GitHub">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
